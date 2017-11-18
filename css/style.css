@@ -1,0 +1,335 @@
+/*
+Author: Deise Souza
+Author URI: https://deisesouza.github.io
+Description: Site da Comunidade Profética no Brasil.
+Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Passion+One');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+/* ==================================================
+  Reset CSS
+================================================== */
+*, 
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+body{
+	background: #ecf0f1 !important;
+	font-family: 'Mukta', sans-serif;
+	font-size: 16px;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+a{
+	text-decoration: none !important; 
+}
+
+/* ==================================================
+  Header - CABEÇALHO DO SITE
+================================================== */
+.barra-superior{
+	background: #222;
+	opacity: 0.8;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+	height: 4.5em;
+	width: 100%;
+	
+	float: left;
+	position: fixed;
+	z-index: 2;
+	font-family: 'Mukta', sans-serif;
+}
+
+#logo{
+	padding: 10px 0px 0px 80px;
+	position: fixed;
+	float: left;
+	z-index: 3;
+	height: 60px;
+	width: 280px;
+}
+
+#logo img{
+ max-width:100%;
+ height:auto;
+}
+
+.menu ul{
+	list-style: none;
+	float: left;
+}
+
+.menu ul li {
+	width: 200px;
+	float: left;
+}
+
+.menu a{
+	padding: 30px 0px 0px 0px;
+	display: block;
+	height: 5em;
+	text-decoration: none;
+	text-align: center;
+	background-color: #222;
+	color: #fff;
+	font-size: 0.9em;
+}
+
+.menu a:hover {
+	background: #fff;
+	color: #555;
+}
+
+/* ==================================================
+  Seção 01 - BANNER
+================================================== */
+.secao01-banner{
+	
+	height: 600px; /*altura da div*/
+	background-repeat: no-repeat;
+	background-size: 100% 100%; /*dimensões da imagem dentro da div*/ 
+}
+
+/* ==================================================
+  Seção 02 - ARTE
+================================================== */
+.secao02-arte{
+	height: 250px;
+	background: transparent;
+	position: absolute;
+	bottom: -2px;
+}
+
+.secao02-arte img{
+	width: 100%;
+	padding-bottom: 30px;
+}
+
+/* ==================================================
+  Seção 03 - NAVEGAÇÃO CENTRAL
+================================================== */
+#assuntos{
+	padding-top: 18px 0px;
+	height: 280px;
+	background: #ecf0f1;
+	display: flex;
+ 	-webkit-justify-content: space-around;
+   	justify-content: space-around;
+   	-webkit-align-items: center;
+    align-items: flex-start;
+}
+
+.itens-assuntos{
+	padding-top: 8px;
+	height: 250px;
+	width: 250px;
+	margin: 5px;
+	background-color: #fff;
+}
+
+.conteudo{
+	text-align: center;
+ }
+
+.conteudo h3 {
+	color: #2980b9;
+	font-size: 1em;
+	font-weight: bold;
+	font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.btn-assuntos{
+	height: 40px;
+	width: 220px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  opacity: 0.9;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container {
+  position: relative;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+  background: #3498db;
+}
+
+.texto a{
+  font-family: 'Bree Serif', serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.3em;
+  white-space: nowrap; 
+  color: #fff;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.texto a:hover{
+	text-decoration: underline;
+}
+
+/* ==================================================
+  Seção 04 - FAIXA PEQUENA | MENSAGEMM
+================================================== */
+#faixa{
+	background: #2980b9;
+	height: 150px; /*altura da div*/
+}
+
+#faixa p{
+	float: right;
+	text-align: right;
+	width: 40%;
+	height: 60px;
+	margin: 40px 5px 5px 50%;
+	font-size: 1.5em;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	color: #fff;
+}
+
+/* ==================================================
+  Seção 05 - SEÇÃO DE VÍDEOS
+================================================== */
+#youtube{
+	height: 60px;
+	width: 60px;
+	margin-left: 38%;
+}
+
+#canais{
+	
+	margin-left: 12%;
+	font-size: 1.2em;
+	font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+#escolha-botoes{
+	margin-top: 10px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	width: 100%;	
+   	padding: 80px 5px 5px 45px; 
+    flex-wrap: wrap; 
+}
+
+.botoes-videos{
+	padding: 5px;
+	height: 35px;
+	width: 80%;
+	margin: 12px;
+	border: none;
+	border-radius: 10px 20px 30px;
+	text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+	font-family: 'Mukta', sans-serif;
+    background-color: #e74c3c; 
+    color: #fff; 
+    cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.botoes-videos:hover{
+	background-color: #c0392b; 
+    color: #fff; 
+}
+
+#videos1{
+	margin-top: 5%;
+	display: flex;
+	flex-direction: row;
+	-webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+    align-items: flex-start;
+}
+
+.link-videos{
+	background:#c0392b; 
+	border: solid 6px #c0392b;
+	bottom: 0;
+	padding: 0;
+	height: 8.5em;
+}
+
+/* ==================================================
+  Seção 06 - SEÇÃO DE AUDIOS - DISCOGRAFIA
+================================================== */
+#area-discografia{
+	height: 400px;
+	background: #fff;
+}
+
+.titulo-secao{
+	position: absolute;
+	color: #2980b9;
+	font-size: 1.6em;
+	margin: 0px 0px 0px 250px;
+	padding-top: 20px;
+}
+
+#logo-app{
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	margin: 12px 0px 0px 180px;
+}
+
+
+.nome-cd{
+text-align: center;
+color: #2980b9;
+font-weight: bold;
+}
+
+/* ==================================================
+  Seção 07
+================================================== */
+
+
+
+/* FONTES UTILIZADAS NO PROJETO
+
+font-family: 'Mukta', sans-serif;
+font-family: 'Bree Serif', serif;
+font-family: 'Satisfy', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Passion One', cursive;
+font-family: 'Ubuntu Condensed', sans-serif;
+
+*/
